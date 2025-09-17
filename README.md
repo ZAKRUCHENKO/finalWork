@@ -1,26 +1,26 @@
-# {{ project_name }}
+# final-selenium-pytest-homework
 
 
-![Python Version](https://img.shields.io/badge/python-{{ python_version }}-blue.svg)
-![Selenium Version](https://img.shields.io/badge/selenium-{{ selenium_version }}-green.svg)
+![Python Version](https://img.shields.io/badge/python-3.12-blue.svg)
+![Selenium Version](https://img.shields.io/badge/selenium-4.35.0-green.svg)
 
 
 ## 📖 Описание
 
-{{ description }}
+Итоговое задание в рамках курса: Тестирование ПО:Автоматизация и Программирование.Python.Selenium. Автоматизация юзер кейсов по использованию интернет магазина.
 
 ## ⚙️ Предварительные требования
 
-*   Python {{ python_version }} или выше
-*   Браузер {{ browser_name }} (или другой, совместимый с WebDriver)
+*   Python 3.12 или выше
+*   Браузер Chrome (или другой, совместимый с WebDriver)
 *   Установленный WebDriver (можно установить автоматически с помощью [webdriver-manager](https://pypi.org/project/webdriver-manager/))
 
 ## 🚀 Установка
 
 1.  Клонируйте репозиторий:
     ```bash
-    git clone https://github.com/{{ github_username }}/{{ project_name }}.git
-    cd {{ project_name }}
+    git clone https://github.com/your-github-username/final-selenium-pytest-homework.git
+    cd final-selenium-pytest-homework
     ```
 
 2.  Создайте виртуальное окружение и активируйте его:
@@ -49,16 +49,25 @@
 
 ## 🤝 Зависимости
 Основные зависимости:
-{% for dep in dependencies %}
 
-{{ dep }}
-{% endfor %}
+
+selenium~=4.35.0
+
+
+webdriver-manager>=3.0.0
+
+
+Faker~=37.6.0
+
+
+pytest~=8.4.2
+
 
 Полный список смотрите в файле requirements.txt.
 
 ## 👤 Автор
-{{ author_name }}
+Zakruchenko Vladislav
 
-Email: {{ author_email }}
+Email: vlado018mt@gmail.com
 
-GitHub: [@{{ github_username }}](https://github.com/{{ github_username }})
+GitHub: [@your-github-username](https://github.com/your-github-username)

@@ -1,0 +1,24 @@
+[project]
+name = "final-selenium-pytest-homework"
+version = "0.1.0"
+description = "Итоговое задание в рамках курса: Тестирование ПО:Автоматизация и Программирование.Python.Selenium. Автоматизация юзер кейсов по использованию интернет магазина."
+readme = "README.md"
+requires-python = ">=3.12"
+authors = [
+    { name = "Zakruchenko Vladislav", email = "vlado018mt@gmail.com" }
+    ]
+
+keywords = ["selenium", "automation", "web-scraping"]
+dependencies = [
+    "selenium~=4.35.0",
+    "webdriver-manager>=3.0.0",
+    "Faker~=37.6.0",
+    "pytest~=8.4.2"
+]
+browser_name = "Google Chrome"
+[project.optional-dependencies]
+dev = ["pytest", "black", "jinja2"]
+
+[project.urls]
+
+Repository = "https://github.com/yourname/awesome-selenium-scraper"
