@@ -12,6 +12,7 @@ class Base:
     def __init__(self, driver):
         self.driver = driver
 
+
     def find_element(self, *locator):
         return WebDriverWait(self.driver, 30).until(EC.presence_of_element_located(locator))
 

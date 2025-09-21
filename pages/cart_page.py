@@ -25,6 +25,7 @@ class CartPage(Base):
     total_cost = "(//div[@class='catalog__goods__blockwithdots__value'])[4]"
     goods_card_in_cart_add_btn = "//a[@class='goods_card_cart_link ']"
     goods_card_in_cart_price_value = "//div[@class='goods_card_price_discount_value']"
+    go_to_order_page = "//button[@class='shopping_cart_main_sidebar_button']"
 
     def __init__(self, driver):
         super().__init__(driver)
@@ -104,6 +105,13 @@ class CartPage(Base):
             (By.XPATH, f"({self.goods_card_in_cart_price_value})[{index}]"))
         )
 
+    def get_go_to_order_page_btn(self):
+        """Локатор кнопки Оформить заказ"""
+        return WebDriverWait(self.driver, 30).until(EC.element_to_be_clickable(
+            (By.XPATH, self.go_to_order_page))
+        )
+
+
     # Actions
 
 
@@ -127,8 +135,14 @@ class CartPage(Base):
         self.get_clear_cart_btn().click()
 
     def click_add_recommendet_goods_to_cart_by_index(self, index):
-        self.get_goods_card_in_cart_add_btn_by_index().click()
+        self.get_goods_card_in_cart_add_btn_by_index(index).click()
         print("Добавить в корзину рекомендуемый товар")
+
+    def click_go_to_order_page_btn(self):
+        self.get_go_to_order_page_btn().click()
+        print("Клик по кнопке Оформить заказ")
+
+
 
 
 

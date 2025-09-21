@@ -9,7 +9,7 @@ from components.filter import FilterComponent
 from components.navigation import NavigationComponent
 from pages.cart_page import CartPage
 from pages.catalog_page import CatalogPage
-
+from pages.order_page import OrderPage
 
 class TestBuyDoor:
     """Тест покупки двери"""
@@ -17,7 +17,7 @@ class TestBuyDoor:
 
 
     def test_buy_door(self, set_up):
-        """Тест покупки двери"""
+        """Тест покупки самой дешевой двери в диапазине 4000-5000 рублей по акции, с увеличением количества товара в корзине """
         driver = set_up
         base = Base(driver)
 
@@ -77,8 +77,20 @@ class TestBuyDoor:
         assert goods_cost == cart_total, "Итоговая стоимость корзины некорректна"
 
         #Переход на страницу оформления
+        cart.click_go_to_order_page_btn()
+        order = OrderPage(driver)
+        order.assert_url("https://sam.saturn.net/cart/?order")
+
+        # Заполнение персональных данных
+
+        order.set_random_fullname()
+        order.set_random_phone()
 
 
+        """TODO"""
+        # Проверка на соответсвие введенных данных на странице оформления товара с данными на странице подтверждения заказа
+
+        """Не завершаю оформление товара по этическим причинам"""
 
 
 

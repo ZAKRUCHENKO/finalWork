@@ -7,6 +7,7 @@ venv/
 .vscode/
 __pycache__/
 *.pyc
+workspace.xml
 
 # OS
 .DS_Store
