@@ -42,7 +42,7 @@
 
 Запуск тестов командой:
 ```bash
- pytest tests -s -v
+ pytest tests/ -s -v
  ```
 
 
