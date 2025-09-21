@@ -19,8 +19,8 @@
 
 1.  Клонируйте репозиторий:
     ```bash
-    git clone https://github.com/your-github-username/final-selenium-pytest-homework.git
-    cd final-selenium-pytest-homework
+    git clone https://github.com/ZAKRUCHENKO/finalWork.git
+    cd finalWork
     ```
 
 2.  Создайте виртуальное окружение и активируйте его:
@@ -42,7 +42,7 @@
 
 Запуск тестов командой:
 ```bash
- pytest tests -s -v
+ pytest tests/ -s -v
  ```
 
 
@@ -70,4 +70,4 @@ Zakruchenko Vladislav
 
 Email: vlado018mt@gmail.com
 
-GitHub: [@your-github-username](https://github.com/your-github-username)
+GitHub: https://github.com/ZAKRUCHENKO

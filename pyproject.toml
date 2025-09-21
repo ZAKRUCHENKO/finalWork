@@ -7,7 +7,7 @@ requires-python = ">=3.12"
 authors = [
     { name = "Zakruchenko Vladislav", email = "vlado018mt@gmail.com" }
     ]
-
+github_username = "ZAKRUCHENKO"
 keywords = ["selenium", "automation", "web-scraping"]
 dependencies = [
     "selenium~=4.35.0",
@@ -21,4 +21,4 @@ dev = ["pytest", "black", "jinja2"]
 
 [project.urls]
 
-Repository = "https://github.com/yourname/awesome-selenium-scraper"
+Repository = "https://github.com/ZAKRUCHENKO/finalWork/"
