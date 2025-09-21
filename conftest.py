@@ -45,5 +45,5 @@ def set_up():
     yield driver
     time.sleep(5)
     print("\nТест завершен!")
-    # driver.quit()
+    driver.quit()
 
