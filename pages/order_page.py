@@ -54,6 +54,7 @@ class OrderPage(Base):
     # Methods
 
     def set_random_fullname(self):
+        """"Заполнит инпут ФИО клиента"""
         #name = self.fake.name()
         f_name = self.fake.first_name()
         s_name = self.fake.last_name()
@@ -62,6 +63,7 @@ class OrderPage(Base):
         print(f"Случайный клиент -  {f_name} {s_name}")
 
     def set_random_phone(self):
+        """"Заполнит инпут Телефон клиента"""
         phone = self.fake.phone_number()
         print(f"Случайный номер телефона - {phone}")
         self.get_phone_input_label().click()

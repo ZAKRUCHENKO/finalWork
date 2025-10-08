@@ -150,15 +150,15 @@ class CartPage(Base):
 # Methods
 
     def reading_text_title(self):
-        print("Получить текст заголовка экрана")
+        """Получить текст заголовка экрана"""
         return self.get_title().text
 
     def reading_text_goods_name_by_index(self, index):
-        print("Получить текст имени товара")
+        """Получить текст имени товара"""
         return self.get_goods_name_by_index(index).text
 
     def assert_value_goods_price_by_index(self, index, goods_catalog_cost_price, goods_catalog_full_price):
-
+        """Проверяет по какой цене товар добавлен в корзину"""
         price_text = self.get_goods_price_by_index(index).text
         cleaned_price = re.sub(r'[^\d.]', '', price_text)
         normal_price = cleaned_price.replace(",", ".")
@@ -174,6 +174,7 @@ class CartPage(Base):
 
 
     def replace_goods_quantity_value_input(self, index, value):
+        """Вводит значение  в инпут Количество товара"""
         quantity_input = self.get_goods_quantity_value_by_index(index)
         quantity_input.click()
         quantity_input.clear()
@@ -181,6 +182,7 @@ class CartPage(Base):
         print(f"В инпут количества товара введено {value} ")
 
     def reading_value_goods_cost_by_index(self, index):
+        """Прочитает стоимость за количесвто одного товара и сохранит в переменную"""
         cost_text = self.get_goods_cost_by_index(index).text
         cleaned_cost = re.sub(r'[^\d.]', '', cost_text)
         normal_cost = cleaned_cost.replace(",", ".")
@@ -190,10 +192,11 @@ class CartPage(Base):
         return goods_cost
 
     def reading_value_goods_quantity_by_index(self, index):
-        print("Получить количество товара в строке")
+        """Получит количество товара в строке"""
         return int(self.get_goods_quantity_value_by_index(index).text)
 
     def reading_price_of_recomendet_goods_by_index(self, index):
+        """Прочитает стоимость рекомендованного товара по индексу и сохранит в переменную"""
         price_text = self.get_goods_cost_by_index(index).text
         cleaned_price = price_text.replace(" ", '')
         normal_price = cleaned_price.replace(",", ".")
@@ -205,6 +208,7 @@ class CartPage(Base):
 
 
     def reading_total_cost(self):
+        """Прочитает итоговую стоимость товаров в корзине"""
         cost_text = self.get_total_cost().text
         cleaned_cost = cost_text.replace(" ", '')
         normal_cost = cleaned_cost.replace(",", ".")

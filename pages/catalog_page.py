@@ -50,6 +50,7 @@ class CatalogPage(Base):
     # Methods
 
     def reading_first_price_by_index(self, goods_index):
+        """Прочитает стоимость товара со скидкой и запомнит в переменную"""
         price_text = self.get_goods_first_price_by_index(goods_index * 2 - 1).text
         cleaned_price = price_text.replace(" ", '')
         normal_price = cleaned_price.replace(",", ".")
@@ -59,6 +60,7 @@ class CatalogPage(Base):
         return goods_catalog_price
 
     def reading_second_price_by_index(self, goods_index):
+        """Прочитает полную стоимость товара и запомнит в переменную"""
         price_text = self.get_goods_first_price_by_index(goods_index * 2).text
         cleaned_price = price_text.replace(" ", '')
         normal_price = cleaned_price.replace(",", ".")
